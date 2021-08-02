@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Couple</title>
+<meta name="description"
+   content="A set of ideas of animating images and other elements while smooth scrolling a page." />
+<meta name="keywords"
+   content="smooth scrolling, animation, scroll, website, images, web development, javascript" />
+<meta name="author" content="Codrops" />
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="https://use.typekit.net/dec4mzz.css">
+<link rel="stylesheet" type="text/css" href="css/base.css" />
+<link rel="stylesheet" href="css/style.css" />
+<script>
+   document.documentElement.className = "js";
+   var supportsCssVars = function() {
+      var e, t = document.createElement("style");
+      return t.innerHTML = "root: { --tmp-var: bold; }", document.head
+            .appendChild(t),
+            e = !!(window.CSS && window.CSS.supports && window.CSS
+                  .supports("font-weight", "var(--tmp-var)")),
+            t.parentNode.removeChild(t), e
+   };
+   supportsCssVars()
+         || alert("Please view this demo in a modern browser that supports CSS Variables.");
+</script>
+<style>
+@import
+   url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@700&display=swap')
+   ;
+
+@import
+   url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap')
+   ;
+@import
+   url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap')
+   ;
+</style>
+</head>
+<body class="demo-1 loading">
+   <main>
+      <div data-scroll class="page page--layout-2"
+         style="transform: translate3d(0px, 0px, 0px); padding-bottom: 1px;">
+         <h1 class="page__title" style="font-size: 100px">
+            <a href="main.jsp"><img src="./img/logo.png"
+               style="width: 400px; height: 150px; margin: 50px 0 0 -50px;" /></a>
+         </h1>
+         <div class="meta">
+            <div class="meta__links">
+               <!-- <a href="login.jsp"
+                  style="width: 80px; height: 30px; margin: 0 0 0 250px;">
+                  <a href="login.jsp" style ="margin: 0 0 0 400px;"> # 로그인</a>
+               </a> -->
+                <a href="login.jsp" style="width:80px; height:60px; margin :0 0 0 530px; font-size:35px ; font-family: 'Nanum Pen Script', cursive;"> #로그인 </a> 
+            </div>
+            <div class="meta__demos">
+            <div class="meta__demos">
+               <a href="index.html" class="meta__demo meta__demo--current" style="font-size: 45px;  margin: 0 0 20px 0; font-family: 'Nanum Pen Script', cursive;">
+               카테고리</a>
+            </div>
+            <div class="meta__demos" style="margin: -40px 5px 0 -10px;">
+               <div class="meta__links"></div>
+            </div>
+            <div class="meta__demos" style="
+    width: 700px;">
+               <a href="index_hanok.html" class="meta__demo meta__demo--current"
+                  style="font-size: 40px;/*  color: #492F10; */ font-family: 'Nanum Pen Script', cursive;">#한옥스테이</a>
+               <a href="index_couple.html" class="meta__demo"
+                  style="font-size: 40px; font-family: 'Nanum Pen Script', cursive;">#커플숙소</a>
+               <a href="index_gamsung.html" class="meta__demo"
+                  style="font-size: 40px; font-family: 'Nanum Pen Script', cursive;">#감성숙소</a>
+
+               <a href="index_pool.html" class="meta__demo"
+                  style="font-size: 40px; font-family: 'Nanum Pen Script', cursive;">#풀빌라
+               </a><a href="index_healing.html" class="meta__demo"
+                  style="font-size: 40px; font-family: 'Nanum Pen Script', cursive;">#힐링숙소</a>
+
+            </div>
+         </div>
+      </div>
+         
+         <div class="content content--full content--alternate">
+            <div class="content__item content__item--wide">
+               <!-- <span class="content__item-number">01</span> -->
+               <div class="content__item-imgwrap">
+                  <div class="content__item-img">
+                     <!-- 슬라이드쇼  -->
+                     <ul class="slides">
+                        <input type="radio" name="radio-btn1" id="hanok_1_1" checked />
+                        <li class="slide-container">
+                           <div class="slide">
+                              <img src="./img/couple/couple_1_1.jpg" />
+                           </div>
+                           <div class="nav">
+                              <label for="hanok_1_4" class="prev"></label> <label
+                                 for="hanok_1_2" class="next"></label>
+                           </div>
+                        </li>
+
+                        <input type="radio" name="radio-btn1" id="hanok_1_2" />
+                        <li class="slide-container">
+                           <div class="slide">
+                              <img src="./img/couple/couple_1_2.jpg" />
+                           </div>
+                           <div class="nav">
+                              <label for="hanok_1_1" class="prev"></label> <label
+                                 for="hanok_1_3" class="next"></label>
+                           </div>
+                        </li>
+
+                        <input type="radio" name="radio-btn1" id="hanok_1_3" />
+                        <li class="slide-container">
+                           <div class="slide">
+                              <img src="./img/couple/couple_1_3.jpg" />
+                           </div>
+                           <div class="nav">
+                              <label for="hanok_1_2" class="prev"></label> <label
+                                 for="hanok_1_4" class="next"></label>
+                           </div>
+                        </li>
+
+                        <input type="radio" name="radio-btn1" id="hanok_1_4" />
+                        <li class="slide-container">
+                           <div class="slide">
+                              <img src="./img/couple/couple_1_4.jpg" />
+                           </div>
+                           <div class="nav">
+                              <label for="hanok_1_3" class="prev"></label> <label
+                                 for="hanok_1_1" class="next"></label>
+                           </div>
+                        </li>
+                        <li class="nav-dots"><label for="hanok_1_1" class="nav-dot"
+                           id="hanok_1_1_dot"></label> <label for="hanok_1_2"
+                           class="nav-dot" id="hanok_1_2_dot"></label> <label
+                           for="hanok_1_3" class="nav-dot" id="hanok_1_3_dot"></label> <label
+                           for="hanok_1_4" class="nav-dot" id="hanok_1_4_dot"></label></li>
+                     </ul>
+                     
+                     <!--슬라이드 끝나는 부분  -->
+                  </div>
+               </div>
+               <!-- <div class="content__item-deco"></div> -->
+               <h2 class="content__item-title">오푸스11<pre style="margin: 0rem 2rem; font-size : 40px; font-family: 'Nanum Pen Script', cursive;">
+            
+   #경주 #커플숙소                                                         <a href = "map.jsp">예약하기</a>
+            </pre></h2></h2>
+               <p class="content__item-description">
+            <!--    <pre class="pre_item" style="margin: 0rem 2rem;"> #경주 #커플숙소</pre> -->
+               </p>
+            </div>
+            <div class="content__item content__item--wide">
+               <!-- <span class="content__item-number">02</span> -->
+               <div class="content__item-imgwrap">
+                  <div class="content__item-img">
+                     <!-- 슬라이드 시작 -->
+                     <ul class="slides">
+                        <input type="radio" name="radio-btn2" id="hanok_2_1" checked />
+                        <li class="slide-container">
+                           <div class="slide">
+                              <img src="./img/couple/couple_2_1.PNG" />
+                           </div>
+                           <div class="nav">
+                              <label for="hanok_2_4" class="prev"></label> <label
+                                 for="hanok_2_2" class="next"></label>
+                           </div>
+                        </li>
+
+                        <input type="radio" name="radio-btn2" id="hanok_2_2" />
+                        <li class="slide-container">
+                           <div class="slide">
+                              <img src="./img/couple/couple_2_2.PNG" />
+                           </div>
+                           <div class="nav">
+                              <label for="hanok_2_1" class="prev"></label> <label
+                                 for="hanok_2_3" class="next"></label>
+                           </div>
+                        </li>
+
+                        <input type="radio" name="radio-btn2" id="hanok_2_3" />
+                        <li class="slide-container">
+                           <div class="slide">
+                              <img src="./img/couple/couple_2_3.PNG" />
+                           </div>
+                           <div class="nav">
+                              <label for="hanok_2_2" class="prev"></label> <label
+                                 for="hanok_2_4" class="next"></label>
+                           </div>
+                        </li>
+
+                        <input type="radio" name="radio-btn2" id="hanok_2_4" />
+                        <li class="slide-container">
+                           <div class="slide">
+                              <img src="./img/couple/couple_2_4.PNG" />
+                           </div>
+                           <div class="nav">
+                              <label for="hanok_2_3" class="prev"></label> <label
+                                 for="hanok_2_1" class="next"></label>
+                           </div>
+                        </li>
+
+
+                        <li class="nav-dots"><label for="hanok_2_1" class="nav-dot"
+                           id="hanok_2_1_dot"></label> <label for="hanok_2_2"
+                           class="nav-dot" id="hanok_2_2_dot"></label> <label
+                           for="hanok_2_3" class="nav-dot" id="hanok_2_3_dot"></label> <label
+                           for="hanok_2_4" class="nav-dot" id="hanok_2_4_dot"></label></li>
+                     </ul>
+                     <!-- 슬라이드 끝 -->
+                  </div>
+               </div>
+               <!-- <div class="content__item-deco"></div> -->
+               <h2 class="content__item-title">베로마<pre style="margin: 0rem 2rem; font-size : 40px; font-family: 'Nanum Pen Script', cursive;">
+            
+   #부산 #커플숙소                                                         <a href = "map.jsp">예약하기</a></h2>
+               <p class="content__item-description">
+               <!-- <pre style="margin: 0rem 2rem;">#부산 #커플숙소</pre> -->
+               </p>
+            </div>
+            <div class="content__item content__item--wide">
+               <span class="content__item-number">03</span>
+               <div class="content__item-imgwrap">
+                  <div class="content__item-img">
+                     <!-- 슬라이드 시작 -->
+                     <ul class="slides">
+                        <input type="radio" name="radio-btn3" id="hanok_3_1" checked />
+                        <li class="slide-container">
+                           <div class="slide">
+                              <img src="./img/couple/couple_3_1.jpg" />
+                           </div>
+                           <div class="nav">
+                              <label for="hanok_3_4" class="prev"></label> <label
+                                 for="hanok_3_2" class="next"></label>
+                           </div>
+                        </li>
+
+                        <input type="radio" name="radio-btn3" id="hanok_3_2" />
+                        <li class="slide-container">
+                           <div class="slide">
+                              <img src="./img/couple/couple_3_2.jpg" />
+                           </div>
+                           <div class="nav">
+                              <label for="hanok_3_1" class="prev"></label> <label
+                                 for="hanok_3_3" class="next"></label>
+                           </div>
+                        </li>
+
+                        <input type="radio" name="radio-btn3" id="hanok_3_3" />
+                        <li class="slide-container">
+                           <div class="slide">
+                              <img src="./img/couple/couple_3_3.jpeg" />
+                           </div>
+                           <div class="nav">
+                              <label for="hanok_3_2" class="prev"></label> <label
+                                 for="hanok_3_4" class="next"></label>
+                           </div>
+                        </li>
+
+                        <input type="radio" name="radio-btn3" id="hanok_3_4" />
+                        <li class="slide-container">
+                           <div class="slide">
+                              <img src="./img/couple/couple_3_4.jpg" />
+                           </div>
+                           <div class="nav">
+                              <label for="hanok_3_3" class="prev"></label> <label
+                                 for="hanok_3_1" class="next"></label>
+                           </div>
+                        </li>
+                        <li class="nav-dots"><label for="hanok_3_1" class="nav-dot"
+                           id="hanok_3_1_dot"></label> <label for="hanok_3_2"
+                           class="nav-dot" id="hanok_3_2_dot"></label> <label
+                           for="hanok_3_3" class="nav-dot" id="hanok_3_3_dot"></label> <label
+                           for="hanok_3_4" class="nav-dot" id="hanok_3_4_dot"></label></li>
+                     </ul>
+                     <!-- 슬라이드 끝 -->
+                  </div>
+               </div>
+               <!-- <div class="content__item-deco"></div> -->
+               <h2 class="content__item-title">위크앤드<pre style="margin: 0rem 2rem; font-size : 40px; font-family: 'Nanum Pen Script', cursive;">
+            
+   #전주 #커플숙소                                                         <a href = "map.jsp">예약하기</a></h2>
+               <p class="content__item-description">
+               <!-- <pre style="margin: 0rem 2rem;">#전주 #커플숙소</pre> -->
+               </p>
+            </div>
+            <div class="content__item content__item--wide">
+               <span class="content__item-number">04</span>
+               <div class="content__item-imgwrap">
+                  <div class="content__item-img">
+                     <!-- 슬라이드 시작 -->
+                     <ul class="slides">
+                        <input type="radio" name="radio-btn4" id="hanok_4_1" checked />
+                        <li class="slide-container">
+                           <div class="slide">
+                              <img src="./img/couple/couple_4_1.jpg" />
+                           </div>
+                           <div class="nav">
+                              <label for="hanok_4_4" class="prev"></label> <label
+                                 for="hanok_4_2" class="next"></label>
+                           </div>
+                        </li>
+
+                        <input type="radio" name="radio-btn4" id="hanok_4_2" />
+                        <li class="slide-container">
+                           <div class="slide">
+                              <img src="./img/couple/couple_4_2.jpg" />
+                           </div>
+                           <div class="nav">
+                              <label for="hanok_4_1" class="prev"></label> <label
+                                 for="hanok_4_3" class="next"></label>
+                           </div>
+                        </li>
+
+                        <input type="radio" name="radio-btn4" id="hanok_4_3" />
+                        <li class="slide-container">
+                           <div class="slide">
+                              <img src="./img/couple/couple_4_3.PNG" />
+                           </div>
+                           <div class="nav">
+                              <label for="hanok_4_2" class="prev"></label> <label
+                                 for="hanok_4_4" class="next"></label>
+                           </div>
+                        </li>
+
+                        <input type="radio" name="radio-btn4" id="hanok_4_4" />
+                        <li class="slide-container">
+                           <div class="slide">
+                              <img src="./img/couple/couple_4_4.jpg" />
+                           </div>
+                           <div class="nav">
+                              <label for="hanok_4_3" class="prev"></label> <label
+                                 for="hanok_4_1" class="next"></label>
+                           </div>
+                        </li>
+                        <li class="nav-dots"><label for="hanok_4_1" class="nav-dot"
+                           id="hanok_4_1_dot"></label> <label for="hanok_4_2"
+                           class="nav-dot" id="hanok_4_2_dot"></label> <label
+                           for="hanok_4_3" class="nav-dot" id="hanok_4_3_dot"></label> <label
+                           for="hanok_4_4" class="nav-dot" id="hanok_4_4_dot"></label></li>
+                     </ul>
+                     <!-- 슬라이드 끝 -->
+                  </div>
+               </div>
+               <!-- <div class="content__item-deco"></div> -->
+               <h2 class="content__item-title">Slow_steady_studio<pre style="margin: 0rem 2rem; font-size : 40px; font-family: 'Nanum Pen Script', cursive;">
+            
+   #부산 #커플숙소                                                         <a href = "map.jsp">예약하기</a></h2>
+               <p class="content__item-description">
+            <!--    <pre style="margin: 0rem 2rem;">#부산 #커플숙소</pre> -->
+               </p>
+            </div>
+            <p class="credits">
+               Made by <a href="https://www.instagram.com/byfoul/"> InStay</a>
+            </p>
+         </div>
+      </div>
+   </main>
+   <script src="js/imagesloaded.pkgd.min.js"></script>
+   <script src="js/demo.js"></script>
+</body>
+</html>

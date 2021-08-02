@@ -1,0 +1,125 @@
+/* html, body { background: #333 url("https://codepen.io/images/classy_fabric.png"); } */
+
+.slides {
+    padding: 0;
+    width: 1800px;
+    height: 500px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.slides input { display: none; }
+
+.slide-container { display: block; }
+
+.slide {
+    top: 0;
+    opacity: 0;
+    width: 1800px;
+    height: 500px;
+    display: block;
+    position: absolute;
+    transform: scale(0);
+
+    transition: all .7s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.nav label {
+    width: 20%;
+    height: 100%;
+    display: none;
+    position: absolute;
+
+    opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+
+    transition: opacity .2s;
+
+    color: #FFF;
+    font-size: 156pt;
+    text-align: center;
+    line-height: 380px;
+    font-family: "Varela Round", sans-serif;
+    background-color: rgba(255, 255, 255, .3);
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+.slide:hover + .nav label { opacity: 0.5; }
+
+.nav label:hover { opacity: 1; }
+
+.nav .next { right: 0; }
+
+input:checked + .slide-container  .slide {
+    opacity: 1;
+
+    transform: scale(1);
+
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .nav label { display: block; }
+
+.nav-dots {
+  width: 50%;
+  bottom: 9px;
+  height: 11px;
+  display: block;
+  position: absolute;
+  text-align: center;
+}
+
+.nav-dots .nav-dot {
+  top: -5px;
+  width: 11px;
+  height: 11px;
+  margin: 0 4px;
+  position: relative;
+  border-radius: 100%;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-dots .nav-dot:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+input#hanok_1_1:checked ~ .nav-dots label#hanok_1_1_dot,
+input#hanok_1_2:checked ~ .nav-dots label#hanok_1_2_dot,
+input#hanok_1_3:checked ~ .nav-dots label#hanok_1_3_dot,
+input#hanok_1_4:checked ~ .nav-dots label#hanok_1_4_dot,
+
+input#hanok_2_1:checked ~ .nav-dots label#hanok_2_1_dot,
+input#hanok_2_2:checked ~ .nav-dots label#hanok_2_2_dot,
+input#hanok_2_3:checked ~ .nav-dots label#hanok_2_3_dot,
+input#hanok_2_4:checked ~ .nav-dots label#hanok_2_4_dot,
+
+input#hanok_3_1:checked ~ .nav-dots label#hanok_3_1_dot,
+input#hanok_3_2:checked ~ .nav-dots label#hanok_3_2_dot,
+input#hanok_3_3:checked ~ .nav-dots label#hanok_3_3_dot,
+input#hanok_3_4:checked ~ .nav-dots label#hanok_3_4_dot,
+
+input#hanok_4_1:checked ~ .nav-dots label#hanok_4_1_dot,
+input#hanok_4_2:checked ~ .nav-dots label#hanok_4_2_dot,
+input#hanok_4_3:checked ~ .nav-dots label#hanok_4_3_dot,
+input#hanok_4_4:checked ~ .nav-dots label#hanok_4_4_dot {
+  background: rgba(0, 0, 0, 0.8);
+}
